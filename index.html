@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+<script>
+(function(){
+  var k='zhxisbeauty';
+  if(sessionStorage.getItem('ka_auth')!==k){
+    var el=document.createElement('div');
+    el.style.cssText='position:fixed;inset:0;background:#1F3864;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;font-family:sans-serif';
+    el.innerHTML='<div style="background:#fff;border-radius:12px;padding:36px 40px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.3);min-width:280px">'
+      +'<div style="font-size:20px;font-weight:800;color:#1F3864;margin-bottom:6px">长隆集团业绩看板</div>'
+      +'<div style="font-size:12px;color:#888;margin-bottom:20px">请输入访问密码</div>'
+      +'<input id="_pwd" type="password" placeholder="密码" style="width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box">'
+      +'<button id="_btn" style="width:100%;margin-top:12px;padding:10px;background:#1F3864;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">进入</button>'
+      +'<div id="_err" style="color:#E74C3C;font-size:12px;margin-top:8px;height:16px"></div>'
+      +'</div>';
+    document.documentElement.appendChild(el);
+    function check(){
+      if(document.getElementById('_pwd').value===k){
+        sessionStorage.setItem('ka_auth',k);el.remove();
+      }else{document.getElementById('_err').textContent='密码错误，请重试';}
+    }
+    document.getElementById('_btn').onclick=check;
+    document.getElementById('_pwd').onkeydown=function(e){if(e.key==='Enter')check();};
+    document.addEventListener('DOMContentLoaded',function(){document.getElementById('_pwd').focus();});
+  }
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>长隆集团酒店 · 业绩追踪 & 分析</title>
