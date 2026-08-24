@@ -68,7 +68,7 @@ tbody td:first-child{text-align:left}
 .future{color:#bbb}
 .bigday-row{background:#FFF0EB!important}
 .otherbd-row{background:#FFF8F0!important}
-.natas-row{background:#F0F4FF!important}
+.natas-row{background:#F0FFF4!important}
 .today-mark{border-left:3px solid #2E75B6}
 
 .tab-nav{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:10px 20px;margin-bottom:16px;display:flex;gap:6px;align-items:center;position:sticky;top:8px;z-index:100}
@@ -240,7 +240,7 @@ tbody td:first-child{text-align:left}
   <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;font-size:11px">
     <span><span style="display:inline-block;width:10px;height:10px;background:rgba(255,107,53,0.85);border-radius:2px;margin-right:3px"></span>🔴 Big Day</span>
     <span><span style="display:inline-block;width:10px;height:10px;background:rgba(255,192,100,0.80);border-radius:2px;margin-right:3px"></span>🟠 Other Big Day</span>
-    <span><span style="display:inline-block;width:10px;height:10px;background:rgba(70,130,220,0.80);border-radius:2px;margin-right:3px"></span>🔵 NATAS</span>
+    <span><span style="display:inline-block;width:10px;height:10px;background:rgba(80,200,120,0.80);border-radius:2px;margin-right:3px"></span>🟢 NATAS</span>
     <span><span style="display:inline-block;width:10px;height:10px;background:rgba(46,117,182,0.70);border-radius:2px;margin-right:3px"></span>⚪ Normal</span>
     <span><span style="display:inline-block;width:20px;height:2px;background:#1F3864;margin-right:3px;vertical-align:middle"></span>基准目标</span>
     <span><span style="display:inline-block;width:20px;border-bottom:2px dashed #9B59B6;margin-right:3px;vertical-align:middle"></span>激进目标/span>
@@ -675,7 +675,7 @@ tbody td:first-child{text-align:left}
           <td class="warn">90%</td>
         </tr>
 <tr class="natas-row detail-extra">
-          <td><b>2026-08-22</b></td><td>Sat</td><td style="font-size:10px">🔵 NATAS</td>
+          <td><b>2026-08-22</b></td><td>Sat</td><td style="font-size:10px">🟢 NATAS</td>
           <td>170.2</td><td>181.4</td><td><b>231</b></td>
           <td class="hit">136%</td>
           <td class="hit">127%</td>
@@ -683,7 +683,7 @@ tbody td:first-child{text-align:left}
           <td class="hit">108%</td>
         </tr>
 <tr class="natas-row today-mark detail-extra">
-          <td><b>2026-08-23 📍</b></td><td>Sun</td><td style="font-size:10px">🔵 NATAS</td>
+          <td><b>2026-08-23 📍</b></td><td>Sun</td><td style="font-size:10px">🟢 NATAS</td>
           <td>170.2</td><td>181.4</td><td><b>223</b></td>
           <td class="hit">131%</td>
           <td class="hit">123%</td>
@@ -901,13 +901,13 @@ var bgPlugin = {
 var barColors = dayTypes.map(function(t) {
   if (t === 'bigday')  return 'rgba(255,107,53,0.85)';
   if (t === 'otherbd') return 'rgba(255,192,100,0.80)';
-  if (t === 'natas')   return 'rgba(70,130,220,0.80)';
+  if (t === 'natas')   return 'rgba(80,200,120,0.80)';
   return 'rgba(46,117,182,0.70)';
 });
 var barBorders = dayTypes.map(function(t) {
   if (t === 'bigday')  return '#C55A11';
   if (t === 'otherbd') return '#ED7D31';
-  if (t === 'natas')   return '#1a4fa0';
+  if (t === 'natas')   return '#1a7a3a';
   return '#1F3864';
 });
 
@@ -3617,13 +3617,13 @@ var bgPlugin = {
 var barColors = dayTypes.map(function(t) {
   if (t === 'bigday')  return 'rgba(255,107,53,0.85)';
   if (t === 'otherbd') return 'rgba(255,192,100,0.80)';
-  if (t === 'natas')   return 'rgba(70,130,220,0.80)';
+  if (t === 'natas')   return 'rgba(80,200,120,0.80)';
   return 'rgba(46,117,182,0.70)';
 });
 var barBorders = dayTypes.map(function(t) {
   if (t === 'bigday')  return '#C55A11';
   if (t === 'otherbd') return '#ED7D31';
-  if (t === 'natas')   return '#1a4fa0';
+  if (t === 'natas')   return '#1a7a3a';
   return '#1F3864';
 });
 
